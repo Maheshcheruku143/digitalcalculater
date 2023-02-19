@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculater</title>
+    <style>
+        *{
+            padding:10px;
+           margin:10px;
+        }
+        body{
+            background-image: url( );
+            background-size: 100%;
+            width: 100vw;
+            display:flex;
+            height:100vh;
+            justify-content:center;
+           align-items: center;
+
+        }
+        #container{
+            position: relative;
+            width:50%;
+            height:80%;
+            background-color: black;
+            border-radius: 2%;
+            box-shadow: 5px 5px 5px gray;
+        }
+        #display{
+           position: relative;
+            width:75%;
+            height:30px;
+            top:5%;
+            left:9%;
+            background-color: rgb(17, 12, 12);
+            color: white;
+            font-size: 25px;
+            padding: 5px;
+            outline: none;
+            border: groove 10px rgb(17, 12, 12);
+        }
+        .a{
+            top:15vh;
+            left:5vw;
+            margin: 5px;
+            margin-top: 20px;
+            position: relative;
+            width: 15%;
+            height:6vh;
+            background-color: black;
+            color: white;
+            font-size: 24px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px black;
+            border: 2px solid white;
+        }
+        #clear{
+            position: absolute;
+            bottom: 20px;
+            left: 5vw;
+            margin:5px;
+            margin-top: 150px;
+            position: relative;
+            width:30%;
+            height: 6vh;
+            background-color: rgb(17, 12, 12);
+            color: white;
+            border: 2px solid white;
+            font-size: 24px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px black;
+        }
+        #equal{
+            position: absolute;
+            bottom: 20px;
+            left: 5vw;
+            margin:5px;
+            margin-top: 150px;
+            position: relative;
+            width:30%;
+            height: 6vh;
+            background-color: rgb(17, 12, 12);
+            color: white;
+            border: 2px solid white;
+            font-size: 24px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px black;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+    <form name="cform">
+        <input name="Ans" id="display">
+        <br>
+        <input class="a"type="button" value="1"onclick="cform.Ans.value+='1'">
+        <input class="a"type="button" value="2"onclick="cform.Ans.value+='2'">
+        <input class="a"type="button" value="3"onclick="cform.Ans.value+='3'">
+        <input class="a"type="button" value="+"onclick="cform.Ans.value+='+'">
+        <br>
+        <input class="a"type="button" value="4"onclick="cform.Ans.value +='4'">
+        <input class="a"type="button" value ="5"onclick="cform.Ans.value+='5'">
+        <input class="a"type="button" value="6"onclick="cform.Ans.value +='6'">
+        <input class="a"type="button" value="-"onclick="cform.Ans.value +='-'">
+        <br>
+        <input class="a"type="button" value="7"onclick="cform.Ans.value+='7'">
+        <input class="a"type="button" value="8"onclick="cform.Ans.value+='8'">
+        <input class="a"type="button" value="9"onclick="cform.Ans.value+='9'">
+        <input class="a"type="button" value="x"onclick="cform.Ans.value+='*'">
+        <br>
+        <input class="a"type="button" value="%"onclick="cform.Ans.value+='%'">
+        <input class="a"type="button" value="0"onclick="cform.Ans.value+='0'">
+        <input class="a"type="button" value="."onclick="cform.Ans.value+='.'">
+        <input class="a"type="button" value="/"onclick="cform.Ans.value+='/'">
+        <br>
+        <input type="button" value ="=" onclick="cform.Ans.value =eval(cform.Ans.value)" id="equal">
+        <input type="button" value="C"onclick="cform.Ans.value =''" id="clear">
+        <br>
+     </form>
+    </div>
+    <script>
+        function clicksound()
+        {
+            var clicksound=new Audio()
+            clicksound.src="click.mp3"
+            clicksound.play()
+        }
+    </script>
+</body>
+</html>
